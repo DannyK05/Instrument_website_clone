@@ -5,6 +5,15 @@
   color: #fff;
   font-family: 'Nunito', sans-serif;
 }
+ /* ::-webkit-scrollbar{
+  background-color: #000;
+ }
+ ::-webkit-scrollbar-thumb{
+  background-color: #fff;
+ }
+ ::-webkit-scrollbar-button{
+  background-color: #fff;
+ } */
 
 button{
   background-color: #fff;
@@ -13,19 +22,26 @@ button{
   padding: 10px 5px;;
   width: 150px;
 }
+.content p{
+  width: 24ch;
+}
 
 header{
+  position: fixed;
+  background-color: #000;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100vw;
   align-items: center;
   justify-content: space-between;
+  padding: 20px 10px;
 }
 
 header, header ul{
   display: flex;
 }
-header .logo{
-  margin-left: 20px;
-  line-height: 20px;
-}
+
 
  header ul li{
   list-style: none;
@@ -61,7 +77,6 @@ a:hover::after, a:hover::before{
   transform: scale(1);
 } 
 .opening{
-  position: relative;
   text-align: left;
   width: 90%;
   padding: 50px 20px;
@@ -89,71 +104,24 @@ a:hover::after, a:hover::before{
    font-weight: bold;
  }
 
-.first{
-  width: 90%;
+.first, .second, .third{
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 50px;
+  justify-content: space-between;
+  padding: 50px 150px;
 }
 
-.first img{
+ img{
   max-height: 400px;
   width: 500px;
-  margin-right: 200px;
-}
-
-.first span{
-  margin-left: 50px;
-}
-.first span p{
-  width: 24ch;
-}
-
-.second{
-  width: 90%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 50px;
-}
-.second span{
-  margin-right: 50px;
-}
-.second span p{
-  width: 24ch;
-}
-.second img{
-  max-height: 400px;
-  width: 300px;
-  margin-left: 200px;
 }
 
 
-.third{
-  width: 90%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 50px;
-}
-
-.third img{
-  max-height: 400px;
-  width: 400px;
-  margin-right: 200px;
-}
-
-.third span{
-  margin-left: 40px;
-}
-.third span p{
-  width: 24ch;
-}
 .jumbo2 {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   padding: 50px;
  }
 
@@ -162,9 +130,6 @@ a:hover::after, a:hover::before{
   width: 25ch;
   font-weight: bold;
   margin-bottom: 10px;
- }
- .jumbo2 button{
-   margin-left: 70px;
  }
 
  .flyers{
@@ -177,11 +142,6 @@ a:hover::after, a:hover::before{
 .flyers .fly1{
  margin-right: 50px;
  padding: 50px;
-}
-
-.flyers .fly1 img, .flyers .fly2 img{
-  width: 500px;
-  max-height: 400px;
 }
 
 .fourth {
@@ -198,10 +158,6 @@ a:hover::after, a:hover::before{
   font-weight: bold;
 }
 
-.fourth button{
-  margin-left: 100px;
-}
-
 .banner{
   display: flex;
   align-items: center;
@@ -213,4 +169,111 @@ a:hover::after, a:hover::before{
   margin: 60px;
   font-size: 2em;
   font-weight: 600;
+}
+footer{
+  width: 90vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px
+}
+.bottom{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+footer .bottom, footer .contact{
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .bottom ul{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100px;
+}
+
+footer .bottom ul li{
+  list-style: none;
+  margin-right: 150px;
+}
+footer .contact button{
+  margin-right: 10px;
+}
+footer .social a{
+  font-size: 20px;
+  margin-right: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+@media (max-width: 480px) {
+  nav{
+    display: none;
+  }
+  .opening p{
+    width: 100%;
+  }
+  .first, .third{
+    flex-direction: column;
+    width: 100vw;
+    padding: 20px;
+  }
+  .second{
+    flex-direction: column-reverse;
+    width:100vw;
+    padding: 20px
+  }
+  img{
+    width:90%;
+    height: 100%;
+  }
+  .jumbo2{
+    width: 90vw;
+  }
+  .jumbo2 p{
+    width: 90%;
+  }
+  .flyers{
+    width:100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  .fly1, .fly2{
+    width: 90%;
+  }
+  .fourth{
+    width: 90vw;
+    padding: 20px;
+  }
+  .fourth span{
+    width: 100%;
+  }
+  .fourth p{
+    width: 80%;
+  }
+  .banner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  footer{
+    width: 100vw;
+    flex-direction: column;
+  }
+  footer .bottom{
+    width: 100%;
+  }
+  footer .bottom ul{
+    width: 90%;
+  }
+  footer .bottom ul li{
+    margin-right: 20px;
+  }
 }
