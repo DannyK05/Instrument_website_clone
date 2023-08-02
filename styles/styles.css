@@ -213,6 +213,10 @@ footer .social a{
   nav{
     display: none;
   }
+  header{
+    width: 95vw;
+    padding: 20px 5px;
+  }
   .opening p{
     width: 100%;
   }
@@ -227,7 +231,7 @@ footer .social a{
     padding: 20px
   }
   img{
-    width:90%;
+    width:80%;
     height: 100%;
   }
   .jumbo2{
