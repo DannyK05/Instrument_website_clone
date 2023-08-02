@@ -210,6 +210,14 @@ footer .social a{
   text-decoration: none;
 }
 @media (max-width: 480px) {
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .opening h1{
+    font-size: 60px;
+  }
   nav{
     display: none;
   }
@@ -234,11 +242,16 @@ footer .social a{
     width:80%;
     height: 100%;
   }
+  .jumbo p{
+  font-size: 1em;
+  }
   .jumbo2{
     width: 90vw;
   }
   .jumbo2 p{
     width: 90%;
+    padding: 10px;
+    font-size: 1em;
   }
   .flyers{
     width:100vw;
